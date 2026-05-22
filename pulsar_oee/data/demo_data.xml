@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>
+        <!-- Demo Machines -->
+        <record id="demo_machine_p1" model="pulsar.machine">
+            <field name="name">P-1</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">producing</field>
+            <field name="current_speed">558</field>
+            <field name="total_products">51783</field>
+            <field name="quality">99</field>
+            <field name="current_operation">Recarga de material</field>
+            <field name="operation_type">normal</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">104</field>
+            <field name="total_stop_time">35</field>
+        </record>
+
+        <record id="demo_machine_p2" model="pulsar.machine">
+            <field name="name">P-2</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">stopped</field>
+            <field name="current_speed">0</field>
+            <field name="total_products">8707</field>
+            <field name="quality">95</field>
+            <field name="current_operation">Cierre de orden</field>
+            <field name="operation_type">warning</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">41</field>
+            <field name="total_stop_time">99</field>
+        </record>
+
+        <record id="demo_machine_s2" model="pulsar.machine">
+            <field name="name">S-2</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">stopped</field>
+            <field name="current_speed">0</field>
+            <field name="total_products">1135</field>
+            <field name="quality">92</field>
+            <field name="current_operation">Anotar Paradas</field>
+            <field name="operation_type">warning</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">13</field>
+            <field name="total_stop_time">45</field>
+        </record>
+
+        <record id="demo_machine_s1" model="pulsar.machine">
+            <field name="name">S-1</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">stopped</field>
+            <field name="current_speed">0</field>
+            <field name="total_products">0</field>
+            <field name="quality">0</field>
+            <field name="current_operation">PERSONAL (R.H.) Vacaciones</field>
+            <field name="operation_type">warning</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">0</field>
+            <field name="total_stop_time">287</field>
+        </record>
+
+        <record id="demo_machine_i1" model="pulsar.machine">
+            <field name="name">I-1</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">producing</field>
+            <field name="current_speed">0</field>
+            <field name="total_products">3019</field>
+            <field name="quality">100</field>
+            <field name="current_operation">Anotar Paradas</field>
+            <field name="operation_type">warning</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">24</field>
+            <field name="total_stop_time">36</field>
+        </record>
+
+        <record id="demo_machine_i2" model="pulsar.machine">
+            <field name="name">I-2</field>
+            <field name="machine_type">oee_pro</field>
+            <field name="status">stopped</field>
+            <field name="current_speed">0</field>
+            <field name="total_products">0</field>
+            <field name="quality">0</field>
+            <field name="current_operation">MÁQUINA / MANTENIMIENTO Falla de neumatica</field>
+            <field name="operation_type">machine</field>
+            <field name="shift">morning</field>
+            <field name="total_production_time">0</field>
+            <field name="total_stop_time">287</field>
+        </record>
+    </data>
+</odoo>

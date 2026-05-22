@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main Menu Item -->
+        <menuitem
+            id="pulsar_oee_menu"
+            name="Pulsar OEE"
+            sequence="10"
+            web_icon="pulsar_oee,static/description/icon.png"/>
+
+        <!-- Dashboard Menu -->
+        <menuitem
+            id="pulsar_dashboard_menu"
+            name="Dashboard"
+            parent="pulsar_oee_menu"
+            action="action_oee_dashboard"
+            sequence="10"/>
+
+        <!-- Machines Menu -->
+        <menuitem
+            id="pulsar_machines_menu"
+            name="Machines"
+            parent="pulsar_oee_menu"
+            action="action_machine_list"
+            sequence="20"/>
+
+        <!-- Production Menu -->
+        <menuitem
+            id="pulsar_production_menu"
+            name="Production Orders"
+            parent="pulsar_oee_menu"
+            action="action_production_order_list"
+            sequence="30"/>
+
+        <!-- Stops Menu -->
+        <menuitem
+            id="pulsar_stops_menu"
+            name="Machine Stops"
+            parent="pulsar_oee_menu"
+            action="action_machine_stop_list"
+            sequence="40"/>
+
+        <!-- Reports Menu -->
+        <menuitem
+            id="pulsar_reports_menu"
+            name="Reports"
+            parent="pulsar_oee_menu"
+            sequence="50"/>
+
+        <!-- Analytics Menu Item -->
+        <menuitem
+            id="pulsar_analytics_menu"
+            name="Analytics"
+            parent="pulsar_reports_menu"
+            action="action_oee_metrics_list"
+            sequence="10"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pulsar_machine_user,pulsar.machine user,model_pulsar_machine,base.group_user,1,0,0,0
+access_pulsar_machine_manager,pulsar.machine manager,model_pulsar_machine,,1,1,1,1
+access_pulsar_production_order_user,pulsar.production_order user,model_pulsar_production_order,base.group_user,1,0,0,0
+access_pulsar_production_order_manager,pulsar.production_order manager,model_pulsar_production_order,,1,1,1,1
+access_pulsar_machine_stop_user,pulsar.machine_stop user,model_pulsar_machine_stop,base.group_user,1,0,0,0
+access_pulsar_machine_stop_manager,pulsar.machine_stop manager,model_pulsar_machine_stop,,1,1,1,1
+access_pulsar_oee_metrics_user,pulsar.oee_metrics user,model_pulsar_oee_metrics,base.group_user,1,0,0,0
+access_pulsar_oee_metrics_manager,pulsar.oee_metrics manager,model_pulsar_oee_metrics,,1,1,1,1
+access_pulsar_defect_user,pulsar.defect user,model_pulsar_defect,base.group_user,1,0,0,0
+access_pulsar_defect_manager,pulsar.defect manager,model_pulsar_defect,,1,1,1,1

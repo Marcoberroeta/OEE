@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Production Order List View -->
+        <record id="pulsar_production_order_list_view" model="ir.ui.view">
+            <field name="name">Production Order List</field>
+            <field name="model">pulsar.production_order</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="machine_id"/>
+                    <field name="status" widget="badge"/>
+                    <field name="produced_quantity"/>
+                    <field name="planned_quantity"/>
+                    <field name="quality_percentage" widget="percentage"/>
+                    <field name="start_datetime"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Production Order Form View -->
+        <record id="pulsar_production_order_form_view" model="ir.ui.view">
+            <field name="name">Production Order Form</field>
+            <field name="model">pulsar.production_order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name" placeholder="Order Number"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="machine_id"/>
+                                <field name="status" widget="badge"/>
+                                <field name="sku_id"/>
+                                <field name="operator_id"/>
+                            </group>
+                            <group>
+                                <field name="planned_quantity"/>
+                                <field name="produced_quantity"/>
+                                <field name="defective_quantity"/>
+                                <field name="quality_percentage" widget="percentage"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="start_datetime"/>
+                            <field name="end_datetime"/>
+                            <field name="production_time"/>
+                            <field name="defect_notes" placeholder="Enter defect notes..."/>
+                        </group>
+                        <notebook>
+                            <page string="Defects">
+                                <field name="defect_ids">
+                                    <tree editable="bottom">
+                                        <field name="defect_type"/>
+                                        <field name="quantity"/>
+                                        <field name="description"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="action_production_order_list" model="ir.actions.act_window">
+            <field name="name">Production Orders</field>
+            <field name="res_model">pulsar.production_order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="pulsar_production_order_list_view"/>
+        </record>
+    </data>
+</odoo>
